@@ -4,4 +4,4 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/rapid-jaguar-prisma/dockertest:$SHORT_SHA']
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['beta', 'run', 'deploy', 'dockertest', '--image=gcr.io/rapid-jaguar-prisma/dockertest:$TAG_NAME', '--platform', '--region=us-central1']
+    args: ['beta', 'run', 'deploy', 'dockertest', '--image=gcr.io/rapid-jaguar-prisma/dockertest:$TAG_NAME', '--platform=managed', '--region=us-central1']
